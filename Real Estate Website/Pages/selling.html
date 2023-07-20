@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styling/styles.css" />
+    <link rel="stylesheet" href="../Styling/selling.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="top-img">
+      <!-- <img src="./Buying-Tab1.png" alt="" /> -->
+    </div>
+    <div id="top-nav">
+      <nav>
+        <ul id="top-nav-options">
+          <li data-page="./selling">Selling</li>
+          <li data-page="./feature">Feature</li>
+          <li data-page="./about">About</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <h2>Buying</h2>
+    </div>
+    <div id="left-arrow">
+      <img src="../Images/Left-Arrow.png" alt="" />
+    </div>
+    <div id="right-arrow">
+      <img src="../Images/Right-Arrow.png" alt="" />
+    </div>
+    <div id="text">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium
+        quae quaerat provident mollitia, perferendis itaque nulla numquam beatae
+        est enim! Voluptate totam laborum aspernatur. Nulla maiores dolores fuga
+        dolor?
+      </p>
+      <br />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam saepe
+        libero enim, sint ipsum provident. Quas, excepturi eos? Expedita dolores
+        totam praesentium voluptatem, laboriosam odit molestias sint ratione
+        itaque similique!
+      </p>
+    </div>
+    <div id="bottom-nav">
+      <nav>
+        <ul id="bottom-nav-options">
+          <li data-page="./buying">Buy</li>
+          <li data-page="./selling">Sell</li>
+          <li data-page="./feature">Feature</li>
+          <li data-page="./about">About</li>
+          <li data-page="./search">Search</li>
+        </ul>
+      </nav>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var topNavOptions = document.getElementById("top-nav-options");
+        var bottomNavOptions = document.getElementById("bottom-nav-options");
+
+        topNavOptions.addEventListener("click", handleNavigation);
+        bottomNavOptions.addEventListener("click", handleNavigation);
+
+        function handleNavigation(event) {
+          var target = event.target;
+          if (target.tagName === "LI") {
+            var page = target.getAttribute("data-page");
+            if (page) {
+              window.location.href = page + ".html";
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

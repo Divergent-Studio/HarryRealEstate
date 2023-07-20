@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#top-img {
+  width: 100%;
+  height: 45vh;
+  background-image: url("../Images/Buying-Tab1.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#top-nav-options {
+  background-color: #d2b48c;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#top-nav-options li {
+  padding: 0 auto;
+  cursor: pointer; /* Add this line to show pointer cursor on hover */
+}
+
+#text {
+  text-align: center;
+  position: relative;
+  padding: 0 25%;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+#left-arrow,
+#right-arrow {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+#left-arrow {
+  left: 20px;
+}
+
+#right-arrow {
+  right: 20px;
+}
+
+#left-arrow img,
+#right-arrow img {
+  display: block;
+  margin: 0;
+}
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d2b48c;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  padding: 0;
+}
+
+#bottom-nav-logo {
+  margin-right: 10px;
+  order: 1;
+}
+
+#bottom-nav-options {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  order: 2;
+}
+
+#bottom-nav-options li {
+  padding: 0 25px;
+  cursor: pointer; /* Add this line to show pointer cursor on hover */
+}
+
+#top-nav-options li,
+#bottom-nav-options li {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+#top-nav-options li::before,
+#bottom-nav-options li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: whitesmoke;
+  transition: width 0.5s ease;
+}
+
+#top-nav-options li:hover::before,
+#bottom-nav-options li:hover::before {
+  width: 100%;
+}

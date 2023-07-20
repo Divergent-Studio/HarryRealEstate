@@ -1,0 +1,123 @@
+body {
+  background-color: #83766a;
+  margin: 0%;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.left img {
+  width: 48vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.right {
+  flex: 1;
+  padding: 0px;
+  color: #fff;
+}
+
+.right h2,
+.right p {
+  margin-top: 4%;
+}
+
+#name-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+#heading {
+  font-size: 4.3vh;
+  margin-right: 20px;
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 3vh;
+  right: 3vh;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.bottom-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottom-nav ul li {
+  display: inline-block;
+  margin-right: 50px; /* Adjust the margin as per your spacing needs */
+}
+
+.bottom-nav ul li:last-child {
+  margin-right: 0; /* Remove the margin from the last list item */
+}
+
+.bottom-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw; /* Adjust the desired proportional font size */
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-list {
+    margin: 10px 0;
+  }
+}
+
+/* Additional Styles */
+.profile {
+  flex: 1;
+  background-color: #fff;
+  padding: 0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.profile img {
+  width: 50%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.profile .description {
+  margin-top: 10px; /* Adjust the margin as desired */
+}
+
+.profile h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 18px;
+}

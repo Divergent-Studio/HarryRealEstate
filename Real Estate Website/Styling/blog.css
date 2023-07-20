@@ -1,0 +1,118 @@
+body {
+  margin: 1.5%;
+}
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+.left {
+  border-right: 2px solid black;
+}
+
+.left h1 {
+  font-size: 35px; /* Adjust the font size as desired */
+}
+
+.left h2 {
+  font-size: 22px; /* Adjust the font size as desired */
+  margin-bottom: 10px; /* Adjust the spacing between h2 and "date" as needed */
+}
+
+.left .date {
+  font-size: 14px; /* Adjust the font size for the date as desired */
+  margin-left: 40%;
+}
+
+.left p {
+  line-height: 1.4; /* Adjust the line height as desired */
+  margin-bottom: 20px; /* Adjust the spacing between paragraphs as needed */
+  margin-right: 6%;
+  text-align: justify; /* Align the text to justify */
+}
+
+#left-img {
+  display: flex;
+  justify-content: center;
+}
+#left-img img {
+  max-width: 50%;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 1%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  margin-right: 1.5%;
+}
+
+nav li {
+  margin-left: 40px; /* Adjust the spacing between menu items as needed */
+  position: relative;
+}
+
+nav li a {
+  position: relative;
+  color: rgb(0, 0, 0); /* Set the desired link color */
+  text-decoration: none;
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 0, 0); /* Set the desired underline color */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+}
+
+.right h3 {
+  margin-top: 0;
+}
+
+.blog-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px; /* Adjust the spacing between rows as needed */
+}
+
+.blog-row img {
+  max-width: 30%;
+}
+
+.blog-content {
+  margin-left: 10px; /* Adjust the spacing between the image and text as needed */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-content p.date {
+  font-size: 12px; /* Adjust the font size of the date as needed */
+  align-self: flex-end;
+}

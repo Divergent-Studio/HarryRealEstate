@@ -1,0 +1,55 @@
+.nav-column a {
+  transition: background-color 0.5s, color 0.5s; /* Adding background-color transition */
+  text-decoration: none;
+  color: white;
+  width: calc(33.33% - 10px);
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-column a:hover {
+  background-color: orange; /* Change background color on hover */
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-column .current-tab {
+  background-color: red;
+  color: white;
+}
+
+/* Your existing CSS for .nav-column, .nav-column a, and .carousel-container goes here */
+
+.carousel-container {
+  width: 100%;
+  height: 25vh; /* Set the carousel container height to half of the viewport height */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%; /* Increase width to accommodate all images side by side */
+  transition: transform 0.3s ease-in-out;
+  margin: 0; /* Remove margin to eliminate spacing between images */
+  height: 100%; /* Ensure carousel images cover the entire height */
+}
+
+.carousel-image {
+  width: 100vw; /* Set the image width to the viewport width */
+  height: 100%;
+  object-fit: cover;
+  padding: 0; /* Remove padding around images */
+}
+
+.main-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Arrange elements in a vertical column */
+  height: 50vh; /* Set the main body height to half of the viewport height */
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styling/styles.css" />
+    <title>Buying</title>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div id="top-img1">
+          <!-- <img src="./Buying-Tab1.png" alt="" /> -->
+        </div>
+        <div id="top-img2">
+          <!-- <img src="./Buying-Tab1.png" alt="" /> -->
+        </div>
+        <div id="top-img3">
+          <!-- <img src="./Buying-Tab1.png" alt="" /> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-column">
+      <a href="#" class="carousel-link current" data-index="0">Buy</a>
+      <a href="#" class="carousel-link" data-index="1">Sell</a>
+      <a href="#" class="carousel-link" data-index="2">Feature</a>
+    </div>
+
+    <div id="left-arrow">
+      <img src="../Images/Left-Arrow.png" alt="" class="arrow arrow-left" />
+    </div>
+    <div id="right-arrow">
+      <img src="../Images/Right-Arrow.png" alt="" class="arrow arrow-right" />
+    </div>
+    <div id="text">
+      <div class="bottom-content-wrapper">
+        <div class="carousel-text-container">
+          <div class="carousel-text current" data-index="0">
+            <h1>Buy Header</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
+              animi quod aut, neque commodi, eveniet sed tenetur optio
+              asperiores obcaecati deleniti illum praesentium expedita explicabo
+              cumque. Vitae nobis officia distinctio at officiis, rem,
+              voluptatibus quasi, architecto dicta ullam obcaecati enim nemo
+              assumenda quo quam? Consequuntur dicta impedit dignissimos
+              inventore explicabo.
+            </p>
+          </div>
+          <div class="carousel-text" data-index="1">
+            <h1>Sell Header</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              alias, distinctio quas dolores quia mollitia, maiores, laudantium
+              eos ea reprehenderit sunt nisi consequatur repellat? Impedit,
+              quisquam voluptates vel maxime fugit facilis velit praesentium
+              vitae deserunt molestiae reprehenderit dolor veniam. Laboriosam, a
+              nisi? Et explicabo quisquam aliquam, vitae dolorem laudantium eum?
+            </p>
+          </div>
+          <div class="carousel-text" data-index="2">
+            <h1>Featured Header</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe
+              alias, distinctio quas dolores quia mollitia, maiores, laudantium
+              eos ea reprehenderit sunt nisi consequatur repellat? Impedit,
+              quisquam voluptates vel maxime fugit facilis velit praesentium
+              vitae deserunt molestiae reprehenderit dolor veniam. Laboriosam, a
+              nisi? Et explicabo quisquam aliquam, vitae dolorem laudantium eum?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottom-nav">
+      <div id="bottom-nav-logo">
+        <img src="../Images/HR-Logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <ul id="bottom-nav-options">
+          <li data-page="./buying">Buy</li>
+          <li data-page="./selling">Sell</li>
+          <li data-page="./feature">Feature</li>
+          <li data-page="./about">About</li>
+          <li data-page="./search">Search</li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var newNavOptions = document.getElementById("new-nav");
+        var bottomNavOptions = document.getElementById("bottom-nav-options");
+
+        newNavOptions.addEventListener("click", handleNavigation);
+        bottomNavOptions.addEventListener("click", handleNavigation);
+
+        function handleNavigation(event) {
+          var target = event.target;
+          if (
+            target.tagName === "A" ||
+            target.parentNode.classList.contains("nav-column")
+          ) {
+            var page = target.parentNode.getAttribute("data-page");
+            if (page) {
+              window.location.href = page + ".html";
+            }
+          }
+        }
+      });
+      
+    </script> -->
+    <script src="../Scripts/script.js"></script>
+  </body>
+</html>

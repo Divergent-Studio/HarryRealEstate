@@ -1,0 +1,278 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* styles.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif !important;
+  background-color: #fffbf3;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 2/6vh;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%; /* Width is 300% to accommodate all three slides side by side */
+  transition: transform 0.3s ease-in-out;
+  margin: 0;
+  height: 100%;
+}
+
+.carousel-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: block; /* Add this line to show the current image */
+}
+
+.carousel-image.current img {
+  opacity: 1;
+}
+
+.main-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav-column {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 10px;
+}
+
+.nav-column a:hover {
+  background-color: #605953;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-column a {
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+}
+
+.nav-column .current {
+  background-color: #3b3937;
+  color: white;
+}
+
+.carousel-text-container {
+  display: flex;
+  max-width: 1000px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.carousel-text {
+  display: none;
+  position: absolute;
+  top: 70%; /* Adjust the vertical position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem; /* Increase the font size */
+  color: black; /* Set the text color to black */
+  text-align: center;
+}
+
+.carousel-text.current {
+  display: block; /* Show the current carousel text */
+  margin-top: 10vh;
+}
+
+#top-img1 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("../Images/Buying-Tab1.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#top-img2 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("../Images/Buying-Tab2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#top-img3 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("../Images/Buying-Tab3.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#text {
+  text-align: center;
+  position: relative;
+  padding: 0 25%;
+}
+
+h2 {
+  padding-top: 2%;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+#left-arrow,
+#right-arrow {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+#left-arrow {
+  left: 20px;
+}
+
+#right-arrow {
+  right: 20px;
+}
+
+#left-arrow img,
+#right-arrow img {
+  display: block;
+  margin: 0;
+}
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #83766a;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  padding-top: 0.7%;
+  padding-bottom: 0.7%;
+}
+
+#bottom-nav-logo {
+  margin-right: 10px;
+  order: 1;
+}
+
+#bottom-nav-options {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  order: 2;
+}
+
+#bottom-nav-options li {
+  padding: 0 25px;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+#bottom-nav-options li {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#bottom-nav-options li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #605953;
+  transition: width 0.5s ease;
+}
+
+#bottom-nav-options li:hover::before {
+  width: 100%;
+}
+
+#bottom-nav-options li:hover {
+  color: #605953;
+}
+
+#bottom-nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: vh;
+  padding-right: 200px;
+}
+
+#bottom-nav-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+#new-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #d2b48c;
+  color: white;
+}
+
+.nav-column {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 98.5%;
+}
+
+.nav-column a {
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  width: calc(33.33% - 10px);
+  background-color: #83766a;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-column a:hover {
+  background-color: #605953;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-column .current-tab {
+  background-color: red;
+  color: white;
+}
+
+.carousel-link {
+  margin: 3px;
+}

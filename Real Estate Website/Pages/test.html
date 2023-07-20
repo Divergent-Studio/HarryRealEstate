@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Carousel with Arrows</title>
+    <link rel="stylesheet" href="../Styling/styles.css" />
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="../Images/Buying-Tab1.png" alt="Image 1" />
+        <img src="../Images/Buying-Tab2.png" alt="Image 2" />
+        <img src="../Images/Buying-Tab3.png" alt="Image 3" />
+      </div>
+    </div>
+
+    <div class="main-body">
+      <div class="nav-column">
+        <a href="#" class="carousel-link active" data-index="0">Buy</a>
+        <a href="#" class="carousel-link" data-index="1">Sell</a>
+        <a href="#" class="carousel-link" data-index="2">Featured</a>
+      </div>
+
+      <div class="bottom-content-wrapper">
+        <div class="carousel-text-container">
+          <div class="carousel-text active" data-index="0">
+            <h1>Buy Header</h1>
+            <p>Text for Buy</p>
+          </div>
+          <div class="carousel-text" data-index="1">
+            <h1>Sell Header</h1>
+            <p>Text for Sell</p>
+          </div>
+          <div class="carousel-text" data-index="2">
+            <h1>Featured Header</h1>
+            <p>Text for Featured</p>
+          </div>
+        </div>
+        <div class="arrows-container">
+          <img
+            src="../Images/Left-Arrow.png"
+            alt="Previous"
+            class="arrow arrow-left"
+          />
+          <img
+            src="../Images/Right-Arrow.png"
+            alt="Next"
+            class="arrow arrow-right"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="../Scripts/script.js"></script>
+  </body>
+</html>
