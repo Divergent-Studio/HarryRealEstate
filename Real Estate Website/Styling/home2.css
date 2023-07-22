@@ -1,0 +1,482 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* styles.css */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif", serif !important;
+  background-color: #fffbf3;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  height: 2/6vh;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%; /* Width is 300% to accommodate all three slides side by side */
+  transition: transform 0.3s ease-in-out;
+  margin: 0;
+  height: 100%;
+}
+
+.carousel-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: block; /* Add this line to show the current image */
+}
+
+.carousel-image.current img {
+  opacity: 1;
+}
+
+.main-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav-column {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  width: 100%;
+  /* margin: 10px; */
+  margin-right: 0.1%;
+  margin-left: 0.5%;
+  /* margin-top: 1%; */
+}
+
+.nav-column a:hover {
+  background-color: #605953;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-column a {
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  margin: 0.75%;
+}
+
+.nav-column .current {
+  background-color: #3b3937;
+  color: white;
+}
+
+.carousel-text-container {
+  display: flex;
+  max-width: 1000px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.carousel-text {
+  display: none;
+  position: absolute;
+  top: 70%; /* Adjust the vertical position */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem; /* Increase the font size */
+  color: black; /* Set the text color to black */
+  text-align: center;
+}
+
+.carousel-text.current {
+  display: block; /* Show the current carousel text */
+  margin-top: 10vh;
+}
+
+#top-img1 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("https://raw.githubusercontent.com/Divergent-Studio/HarryRealEstate/main/Real%20Estate%20Website/Images/Buying-Tab1.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#top-img2 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("https://raw.githubusercontent.com/Divergent-Studio/HarryRealEstate/main/Real%20Estate%20Website/Images/Buying-Tab2.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#top-img3 {
+  width: 100%;
+  height: 35vh;
+  background-image: url("https://raw.githubusercontent.com/Divergent-Studio/HarryRealEstate/main/Real%20Estate%20Website/Images/Buying-Tab3.png");
+  background-position: center;
+  background-size: cover;
+}
+
+#text {
+  text-align: center;
+  position: relative;
+  padding: 0 25%;
+}
+
+h2 {
+  padding-top: 2%;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+#left-arrow,
+#right-arrow {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+
+#left-arrow img,
+#right-arrow img {
+  display: block;
+  margin-right: 0%;
+}
+
+#left-arrow {
+  left: 20px;
+  margin-left: 2%;
+}
+
+#left-arrow:hover,
+#right-arrow:hover {
+  cursor: pointer;
+}
+
+#right-arrow {
+  right: 20px;
+  margin-right: 2%;
+}
+
+#bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #83766a;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+#bottom-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+#bottom-nav-options {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  order: 2;
+}
+
+#bottom-nav-options li {
+  padding: 0 25px;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+#bottom-nav-options li a {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+#bottom-nav-options li a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.5s ease;
+}
+
+#bottom-nav-options li a:hover::before {
+  width: 100%;
+}
+
+#bottom-nav-options li:hover {
+  color: #605953;
+}
+
+#bottom-nav-options li a {
+  text-decoration: none;
+  color: white;
+  padding: 1.75px;
+}
+
+#bottom-nav-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: vh;
+}
+
+#bottom-nav-logo img {
+  width: 22.5%;
+}
+
+#new-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #d2b48c;
+  color: white;
+}
+
+.nav-column {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 98.8%;
+}
+
+.nav-column a {
+  transition: background-color 0.5s, color 0.5s;
+  text-decoration: none;
+  width: calc(33.33% - 0px);
+  background-color: #83766a;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-column a:hover {
+  background-color: #605953;
+  color: white;
+  text-decoration: underline;
+}
+
+.nav-column .current-tab {
+  background-color: red;
+  color: white;
+}
+
+.carousel-link {
+  margin: 3px;
+}
+
+@media (max-width: 600px) {
+  /* Decrease the height of the top images */
+  #top-img1,
+  #top-img2,
+  #top-img3 {
+    height: 25vh; /* You can adjust the height value as per your requirement */
+  }
+  .carousel-text {
+    font-size: 75%; /* Set the font size to 50% of the default size */
+    margin-top: 25vh;
+  }
+
+  /* Decrease the font size of the bottom navigation options */
+  #bottom-nav-options li {
+    font-size: 50%; /* Set the font size to 25% of the default size */
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.heading {
+  color: whitesmoke;
+  margin-left: 6%;
+  margin-top: 6%;
+  margin-right: 50%;
+  font-weight: 100;
+}
+
+.header-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40vh; /* Adjust the desired distance from the top */
+  left: 5vw; /* Adjust the desired distance from the left */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
+  width: 50%; /* Adjust the desired width */
+}
+
+.hero-content h1,
+.hero-content p {
+  margin: 0;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.hero-content h1 {
+  font-size: 4vw; /* Adjust the font size proportionally */
+  margin-bottom: 2vh; /* Adjust the margin proportionally */
+}
+
+.hero-content p {
+  font-size: 2vw; /* Adjust the font size proportionally */
+}
+
+.background-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://raw.githubusercontent.com/Divergent-Studio/HarryRealEstate/main/Real%20Estate%20Website/Images/Home-Page-Background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+}
+
+.logo img {
+  max-height: 275px;
+  filter: brightness(150%); /* Adjust the brightness value as desired */
+}
+/* NAV bar bottom */
+
+.bottom-nav {
+  position: absolute;
+  bottom: 1.15%;
+  right: 0.9rem;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0.1%;
+  padding-right: 0.8%;
+}
+
+.bottom-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bottom-nav ul li {
+  display: inline-block;
+  margin-right: 50px; /* Adjust the margin as per your spacing needs */
+}
+
+.bottom-nav ul li:last-child {
+  margin-right: 0; /* Remove the margin from the last list item */
+}
+
+.bottom-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw; /* Adjust the desired proportional font size */
+  position: relative;
+}
+
+.bottom-nav ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease; /* Transition only the width property */
+}
+
+.bottom-nav ul li a:hover:before {
+  width: 100%; /* Expand the width to 100% on hover */
+}
+
+.fullscreen-container {
+  position: absolute;
+  top: 10vh;
+  right: 20px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 6%;
+  margin-top: 6%;
+}
+
+.fullscreen-container button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+#fullscreen-text {
+  color: whitesmoke;
+}
+
+#fullscreen-button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: transform 0.4s;
+}
+
+#fullscreen-button:hover {
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-list {
+    margin: 10px 0;
+  }
+}
+
+#bottom-nav {
+  background-color: transparent;
+  margin-bottom: 20px;
+}
