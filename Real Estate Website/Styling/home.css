@@ -20,11 +20,11 @@ body {
 
 .hero-content {
   position: absolute;
-  top: 40vh; /* Adjust the desired distance from the top */
-  left: 5vw; /* Adjust the desired distance from the left */
+  top: 50vh; /* Adjust the desired distance from the top */
+  left: 0vw; /* Adjust the desired distance from the left */
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow */
-  width: 50%; /* Adjust the desired width */
+  width: 30%; /* Adjust the desired width */
 }
 
 .hero-content h1,
@@ -116,8 +116,8 @@ body {
 
 .fullscreen-container {
   position: absolute;
-  top: 10vh;
-  right: 20px;
+  top: 0vh;
+  right: 0vw;
   background: none;
   display: flex;
   align-items: center;
